@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:widgets_app/config/menu/menu_items.dart';
+import 'package:widgets_app/presentation/screens/buttons/buttons_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -41,17 +42,23 @@ class _CustomListTitle extends StatelessWidget {
     // Obtenemos el color primario de nuestra app, que la especificamos en el AppTheme
     final colors = Theme.of(context).colorScheme;
     return ListTile(
-      leading: Icon(
-        menu.icon,
-        color: colors.primary,
-      ),
-      trailing: Icon(
-        Icons.arrow_back_ios_rounded,
-        color: colors.primary,
-      ),
-      title: (Text(menu.title)),
-      subtitle: Text(menu.subTitle),
-      onTap: () {// TODO:navegar a otra pantalla},
-    );
+        leading: Icon(
+          menu.icon,
+          color: colors.primary,
+        ),
+        trailing: Icon(
+          Icons.arrow_back_ios_rounded,
+          color: colors.primary,
+        ),
+        title: (Text(menu.title)),
+        subtitle: Text(menu.subTitle),
+        onTap: () {
+          // Navigator.of(context).push(
+          //   MaterialPageRoute(
+          //     builder: (context) => const ButtonsScreen(),
+          //   ),
+          // );
+          Navigator.pushNamed(context, menu.link);
+        });
   }
 }
