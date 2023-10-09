@@ -12,6 +12,8 @@ const cards = <Map<String, dynamic>>[
 class CardsScreen extends StatelessWidget {
   const CardsScreen({super.key});
 
+  static const String name = 'cards_sceen';
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
