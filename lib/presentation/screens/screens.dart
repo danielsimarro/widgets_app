@@ -1,6 +1,6 @@
 // Esta clase va a exportart todas mis libreria para no sobre saturar una clase que las necesite
+export 'package:widgets_app/presentation/screens/snackbar/snackbar_screen.dart';
 export 'package:widgets_app/presentation/screens/app_tutorial/app_tutorial_screen.dart';
-export 'package:flutter/material.dart';
 export 'package:widgets_app/presentation/screens/infinite_scroll/infinite_scroll_screen.dart';
 export 'package:widgets_app/presentation/screens/progress/progress_screen.dart';
 export 'package:widgets_app/presentation/screens/ui_controls/ui_controls_screen.dart';

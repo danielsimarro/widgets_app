@@ -53,6 +53,7 @@ class _ControlledProgresIndicator extends StatelessWidget {
         //Creamos un streem builder que cada 300 milisegundos va aumentando la barra de progreso
         stream: Stream.periodic(const Duration(milliseconds: 300), (value) {
           return (value * 2) / 100;
+          // El takeWhile dice que cuando el value llegue a 100 para la barra
         }).takeWhile((value) => value < 100),
         builder: (context, snapshot) {
           final progresValue = snapshot.data ?? 0;
