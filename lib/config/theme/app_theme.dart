@@ -23,4 +23,9 @@ class AppTheme {
       brightness: isDarkmode ? Brightness.dark : Brightness.light,
       colorSchemeSeed: colorList[selectedColor],
       appBarTheme: const AppBarTheme(centerTitle: false));
+
+  // Es un metodo que copia las clases
+  AppTheme copyWith({int? selectedColor, bool? isDarkmode}) => AppTheme(
+      selectedColor: selectedColor ?? this.selectedColor,
+      isDarkmode: isDarkmode ?? this.isDarkmode);
 }
